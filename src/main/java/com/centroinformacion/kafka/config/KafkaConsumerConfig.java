@@ -27,7 +27,7 @@ public class KafkaConsumerConfig {
         props.put(
                 ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG,
                 bootstrapAddress);
-        props.put(JsonSerializer.TYPE_MAPPINGS,"com.prestamo:com.prestamo.kafka.entity.PaisCreateEvent");
+        props.put(JsonSerializer.TYPE_MAPPINGS,"com.prestamo:com.centroinformacion.kafka.entity.EjemploCreateEvent");
 
         final JsonDeserializer<Event<?>> jsonDeserializer = new JsonDeserializer<>();
         return new DefaultKafkaConsumerFactory(
